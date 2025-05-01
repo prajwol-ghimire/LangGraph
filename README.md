@@ -12,3 +12,16 @@ Level 5 Autonomy where Decide output steps and which Steps to Take is decided by
 ```NLP +  LLM```
 
 ![Levels of autonomy in LLM applications](LevelsofAutonomy.png)
+
+
+## Reflection vs Reflexion Agents
+
+| Feature          | Reflection Agent                             | Reflexion Agent                              |
+|------------------|----------------------------------------------|----------------------------------------------|
+| How it learns    | Thinks about its own decisions               | Learns from past mistakes and tries again    |
+| Feedback         | Uses self-review or prompts                  | Uses success/failure feedback                |
+| Adaptability     | Somewhat flexible                            | Very flexible and improves over time         |
+| Memory           | Optional or short-term                       | Keeps memory of what worked and what didn’t  |
+| Goal             | Improve reasoning                            | Get better at solving tasks step by step     |
+| Inspired by      | Human self-reflection                        | Trial-and-error learning like humans do      |
+
