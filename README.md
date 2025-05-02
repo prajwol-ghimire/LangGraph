@@ -52,6 +52,13 @@ Level 5 Autonomy where Decide output steps and which Steps to Take is decided by
             "content": "Show me restaurants in Paris."
         }
 
-        
+## ReAct agents
+
+`initialize_agent()` class contains two method that are described as:
+
+- `create_react_agent`: A Langchain helper that creates a ReAct-style agent (Reasoning + Acting) using a language model and a set of tools. It lets the agent reason step-by-step and call tools as needed.
+
+- `AgentExecutor`: A class in Langchain that executes agents—it manages the loop of reasoning, tool usage, and final answer generation based on the agent’s logic.
+
 
 
