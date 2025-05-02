@@ -24,10 +24,34 @@ Level 5 Autonomy where Decide output steps and which Steps to Take is decided by
 | Memory           | Optional or short-term                       | Keeps memory of what worked and what didn’t  |
 | Goal             | Improve reasoning                            | Get better at solving tasks step by step     |
 | Inspired by      | Human self-reflection                        | Trial-and-error learning like humans do      |
+| Example          | [GraphVisulaization](GraphVisulaization) is a Reflection Agent. | [ReflexionAgent](ReflexionAgent) is a Reflexion Agent.|
 
 
 ![Reflexion Agent](Reflexion.png)
 
-[SelfFunctionCalling](SelfFunctionCalling) is a Reflection Agent.
+
+
+## State and Message in LangGraph
+
+1. State in LangGraph
+
+    A state is the shared memory or data context that is passed between nodes in a graph.
+        
+            state = {
+                "user_input": "Where is the Eiffel Tower?",
+                "tool_results": {},
+                "final_answer": None
+            }
+
+2. Message in LangGraph
+
+    A message is a unit of information that is passed between nodes—often the data that triggers the next step in the graph.
+
+        message = {
+            "role": "user",
+            "content": "Show me restaurants in Paris."
+        }
+
+        
 
 
