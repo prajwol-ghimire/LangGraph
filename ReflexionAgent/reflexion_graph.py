@@ -35,7 +35,7 @@ app.get_graph().print_ascii()
 
 
 response = app.invoke(
-    "Write about Nepal tour Package for summer like itearnary and duration",
+    "Write me a Blog about Art and Handicraft in context of Nepal",
 )
 
 # print(response, "response")
