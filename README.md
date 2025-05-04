@@ -102,3 +102,19 @@ In [ChatBotwithToolOutput](/chatBot/ChatWithSqliteAndToolOutput.md) we got error
 #### Example
 For a Content creating AI for social Media and Post Automatiaclly with API method Call 
     ![ReviewByHuman](/Images/ReviewByHuman.png)
+
+
+# RAG (Retrieval-Augmented Generation):
+RAG is a method in natural language processing (NLP) that combines retrieval of relevant documents from an external source and generation of text using a pre-trained model. It enhances model performance by providing real-time, context-relevant information during the generation process.
+
+## Why it's used:
+- Improved accuracy: It allows the model to access more information beyond its training data.
+- Better contextual responses: Retrieval provides specific, updated information, which improves response quality.
+- Scalability: Allows large-scale models to generate more precise and specific content without needing to store everything in the model itself.
+
+## Popular companies using RAG:
+
+- OpenAI: Incorporates retrieval in its models like GPT for more up-to-date information.
+- Google: Uses retrieval-augmented techniques in their search and language models.
+- Facebook AI (Meta): Implements RAG for research in information retrieval and language understanding tasks.
+- Microsoft: Uses RAG methods in tools like Bing and other AI applications for improved response accuracy.
