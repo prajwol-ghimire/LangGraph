@@ -57,7 +57,6 @@ events = app.stream({
 for event in events:
     event["messages"][-1].pretty_print()
 
-
 snapshot = app.get_state(config=config)
 snapshot.next
 
