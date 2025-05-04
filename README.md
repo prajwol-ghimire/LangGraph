@@ -60,5 +60,17 @@ Level 5 Autonomy where Decide output steps and which Steps to Take is decided by
 
 - `AgentExecutor`: A class in Langchain that executes agents—it manages the loop of reasoning, tool usage, and final answer generation based on the agent’s logic.
 
+## Memory Chat Bot
+
+### CheckPointers:
+
+- Way to save State or workflow at specifc point during execution
+- Used For Memory in chatbot 
+
+### Thread ID:
+
+- Simply a unique identider for specifc conversation or workflow execution
+- Thing like sessionID for every own chat.
+
 
 
