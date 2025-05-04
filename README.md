@@ -24,7 +24,7 @@ Level 5 Autonomy where Decide output steps and which Steps to Take is decided by
 | Memory           | Optional or short-term                       | Keeps memory of what worked and what didn’t  |
 | Goal             | Improve reasoning                            | Get better at solving tasks step by step     |
 | Inspired by      | Human self-reflection                        | Trial-and-error learning like humans do      |
-| Example          | [GraphVisulaization](GraphVisulaization) is a Reflection Agent. | [ReflexionAgent](ReflexionAgent) is a Reflexion Agent.|
+| Example          | [GraphVisulaization](/Graph%20Visualization/) is a Reflection Agent. | [ReflexionAgent](/ReflexionAgent) is a Reflexion Agent.|
 
 
 ![Reflexion Agent](/Images/Reflexion.png)
@@ -74,7 +74,7 @@ Level 5 Autonomy where Decide output steps and which Steps to Take is decided by
 
 ### Human In Loop:
 
-In [ChatBotwithToolOutput](ChatBotwithToolOutput) we got error when asking for Favorite Flavour of Icecream since tool used same function for Ram and hari when asking for Favorite Flavour. Human in Loop remove the ambigutiy to LLM and Ask the validation of response to the user and save into memory.
+In [ChatBotwithToolOutput](/chatBot/ChatWithSqliteAndToolOutput.md) we got error when asking for Favorite Flavour of Icecream since tool used same function for Ram and hari when asking for Favorite Flavour. Human in Loop remove the ambigutiy to LLM and Ask the validation of response to the user and save into memory.
 
 - Reviewing tool calls
 - Validating LLMS Ouputs
