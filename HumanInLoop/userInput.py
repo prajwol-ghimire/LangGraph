@@ -8,7 +8,7 @@ class State(TypedDict):
 
 llm = ChatGroq(model="llama-3.1-8b-instant")
 
-GENERATE_POST = "generate_post"
+GENERATE_POST = "generate_post" 
 GET_REVIEW_DECISION = "get_review_decision"
 POST = "post"
 COLLECT_FEEDBACK = "collect_feedback"
