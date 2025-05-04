@@ -11,7 +11,7 @@ Level 5 Autonomy where Decide output steps and which Steps to Take is decided by
 
 ```NLP +  LLM```
 
-![Levels of autonomy in LLM applications](LevelsofAutonomy.png)
+![Levels of autonomy in LLM applications](/Images/LevelsofAutonomy.png)
 
 
 ## Reflection vs Reflexion Agents
@@ -27,7 +27,7 @@ Level 5 Autonomy where Decide output steps and which Steps to Take is decided by
 | Example          | [GraphVisulaization](GraphVisulaization) is a Reflection Agent. | [ReflexionAgent](ReflexionAgent) is a Reflexion Agent.|
 
 
-![Reflexion Agent](Reflexion.png)
+![Reflexion Agent](/Images/Reflexion.png)
 
 
 
@@ -72,5 +72,33 @@ Level 5 Autonomy where Decide output steps and which Steps to Take is decided by
 - Simply a unique identider for specifc conversation or workflow execution
 - Thing like sessionID for every own chat.
 
+### Human In Loop:
 
+In [ChatBotwithToolOutput](ChatBotwithToolOutput) we got error when asking for Favorite Flavour of Icecream since tool used same function for Ram and hari when asking for Favorite Flavour. Human in Loop remove the ambigutiy to LLM and Ask the validation of response to the user and save into memory.
 
+- Reviewing tool calls
+- Validating LLMS Ouputs
+
+#### Design Patterns in Human In Loop
+
+1. Approve and reject:
+
+    Depending on Human approval or rejection with the action or take alternative path.
+
+    ![Approveorreject](/Images/Approveorreject.png)
+
+2. Review and Edit State
+
+    A human can review and edit the mistake and correct the mistake or update the state information. We are updating the state here not tool itself.
+
+    ![ReviewAndEditState](/Images/ReviewAndEditState.png)
+
+3. Review Tool calls
+
+    A human can review and eddit LLM output befor processing. It is needed for Tools calls by the LLMs are sensative and need approval such as To change username of user asking the secert code of something that only authorized user and LLM thread knows
+
+    ![ReviewToolCalls](/Images/ReviewToolCalls.png)
+
+#### Example
+For a Content creating AI for social Media and Post Automatiaclly with API method Call 
+    ![ReviewByHuman](/Images/ReviewByHuman.png)
