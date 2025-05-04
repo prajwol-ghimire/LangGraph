@@ -74,7 +74,7 @@ Level 5 Autonomy where Decide output steps and which Steps to Take is decided by
 
 ### Human In Loop:
 
-In [ChatBotwithToolOutput](/chatBot/ChatWithSqliteAndToolOutput.md) we got error when asking for Favorite Flavour of Icecream since tool used same function for Ram and hari when asking for Favorite Flavour. Human in Loop remove the ambigutiy to LLM and Ask the validation of response to the user and save into memory.
+In [ChatBotwithToolOutput](/chatBot/ChatWithSqliteAndToolOutput.md) we got error when asking for Favorite Flavour of Icecream since tool used same function for Ram and Hari when asking for Favorite Flavour. Human in Loop remove the ambigutiy to LLM and Ask the validation of response to the user and save into memory.
 
 - Reviewing tool calls
 - Validating LLMS Ouputs
