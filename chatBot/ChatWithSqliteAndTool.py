@@ -22,9 +22,17 @@ search_tool = TavilySearchResults(max_results=2)
 @tool
 def my_IceCream_Flavour(format: str = "Name"):
     """Returns the best flavour of Ram's icecream"""
+
     return "Vanilla"
 
-tools = [search_tool, my_IceCream_Flavour]
+
+@tool
+def BestNepalPackage(format: str = "Name"):
+    """Returns the best Top 10 package with keyword from Travoires Databases"""
+    
+    return "Package"
+
+tools = [search_tool, my_IceCream_Flavour, BestNepalPackage]
 
 llm = ChatGroq(model="llama-3.1-8b-instant")
 llm_with_tools = llm.bind_tools(tools=tools)

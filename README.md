@@ -106,6 +106,10 @@ For a Content creating AI for social Media and Post Automatiaclly with API metho
 
 # RAG (Retrieval-Augmented Generation):
 RAG is a method in natural language processing (NLP) that combines retrieval of relevant documents from an external source and generation of text using a pre-trained model. It enhances model performance by providing real-time, context-relevant information during the generation process.
+It’s an architecture that combines retrieval-based methods with generative models like large language models (LLMs) to improve the quality, relevance, and accuracy of responses.
+
+![RAG](/Images/RAG.png)
+
 
 ## Why it's used:
 - Improved accuracy: It allows the model to access more information beyond its training data.
@@ -118,3 +122,20 @@ RAG is a method in natural language processing (NLP) that combines retrieval of 
 - Google: Uses retrieval-augmented techniques in their search and language models.
 - Facebook AI (Meta): Implements RAG for research in information retrieval and language understanding tasks.
 - Microsoft: Uses RAG methods in tools like Bing and other AI applications for improved response accuracy.
+
+
+
+## Classification Driven Retrival System
+
+- ```Goal:``` To provide relevant answers from your knowledge base for in-context user queries and gracefully handle out-of-context questions.
+
+- ```Mechanism:``` Before performing Retrieval-Augmented Generation (RAG), classify the user's query to determine if it's related to your defined knowledge domain.
+Workflow:
+
+- ```User Input:``` The user asks a question.
+Query Classification: A classification model (e.g., a text classifier) analyzes the user's query.
+
+- ```In-Context:``` If the classifier determines the query is within the defined domain:
+Proceed with standard RAG: Retrieve relevant documents from your vector store.
+
+![ClassificationDrivenRAG](/Images/ClassificationDrivenRAG.png)
