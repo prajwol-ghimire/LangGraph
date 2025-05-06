@@ -20,6 +20,8 @@ actor_prompt_template = ChatPromptTemplate.from_messages(
                     1. {first_instruction}
                     2. Reflect and critique your answer. Be severe to maximize improvement.
                     3. After the reflection, **list 1-3 search queries separately** for researching improvements. Do not include them inside the reflection.
+                    4. The context of Problem statement is:
+                    ` RainFall predicition system using Recyclable bottle, IOT and AI.`
             """,
         ),
         MessagesPlaceholder(variable_name="messages"),
@@ -41,13 +43,25 @@ first_responder_chain = first_responder_prompt_template | llm.bind_tools(tools=[
 
 validator = PydanticToolsParser(tools=[AnswerQuestion])
 
-revise_instructions = """Revise your previous answer using the new information.
-    - You should use the previous critique to add important information to your answer.
-        - You MUST include numerical citations in your revised answer to ensure it can be verified.
-        - Add a "References" section to the bottom of your answer (which does not count towards the word limit). In form of:
-            - [1] https://example.com
-            - [2] https://example.com
-    - You should use the previous critique to remove superfluous information from your answer and make SURE it is not more than 250 words.
+revise_instructions = """
+Revise the following text by deeply enhancing its quality, factual accuracy, and academic credibility using real-world research papers, whitepapers, and verified data sources:
+
+1. Identify weak, vague, or unsupported statements and replace them with strong, well-cited claims from reliable sources.
+2. Add numerical citations in the format [1], [2], etc., immediately after each claim or fact.
+3. Ensure every major claim is backed by a real academic or scientific source.
+4. Remove any redundant or unsubstantiated content to maintain clarity and conciseness.
+5. Keep the revised content under 150 words.
+6. Add a properly formatted “References” section at the end (not counted in the word limit), with full URLs for each source used.
+7. Provide me link on every citation in format Link: String
+8. Ensure the revised text is suitable for an academic audience, maintaining a formal tone and structure.
+
+You must:
+- Use Google Scholar, research repositories, or credible government/NGO sources for citations.
+- Replace generic statements like “many studies show” with specific references.
+- Suggest improved phrasing where appropriate to elevate academic tone and clarity.
+
+Return only the revised text followed by a numbered “References” section.
 """
+
 
 revisor_chain = actor_prompt_template.partial( first_instruction=revise_instructions) | llm.bind_tools(tools=[ReviseAnswer], tool_choice="ReviseAnswer")

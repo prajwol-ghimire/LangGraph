@@ -7,7 +7,7 @@ from chains import revisor_chain, first_responder_chain
 from execute_tools import execute_tools
 
 graph = MessageGraph()
-MAX_ITERATIONS = 2
+MAX_ITERATIONS = 4
 
 graph.add_node("draft", first_responder_chain)
 graph.add_node("execute_tools", execute_tools)
@@ -34,9 +34,12 @@ print(app.get_graph().draw_mermaid())
 app.get_graph().print_ascii()
 
 
-response = app.invoke(
-    "Write me a Blog about Art and Handicraft in context of Nepal",
-)
+response = app.invoke("""
+Javascript framework for frontend and backend [react and nodeexpress why to use with documentation]
+                    
+                      
+""")
+
 
 # print(response, "response")
 print(response[-1].tool_calls[0]["args"]["answer"])
